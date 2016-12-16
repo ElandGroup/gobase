@@ -16,4 +16,8 @@ func RegApi() {
 	v1 := api.Group("/v1")
 	basis := v1.Group("/basis")
 	basis.GET("", service.GetBasis)
+	flowcontrol := v1.Group("/flowcontrol")
+	flowcontrol.GET("/if", service.Getif)
+	flowcontrol.GET("/for", service.Getfor)
+	flowcontrol.GET("/switch", service.Getswitch)
 }
