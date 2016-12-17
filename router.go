@@ -20,4 +20,8 @@ func RegApi() {
 	flowcontrol.GET("/if", service.Getif)
 	flowcontrol.GET("/for", service.Getfor)
 	flowcontrol.GET("/switch", service.Getswitch)
+	funcApi := v1.Group("/func")
+	funcApi.GET("", service.Getfunc)
+	funcApi.GET("/pass", service.GetFuncPass)
+
 }
